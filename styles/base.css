@@ -1,0 +1,133 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #e63946;
+    --background-color: #f1faee;
+    --card-color: #ffffff;
+    --text-color: #222;
+    --light-color: #ffffff;
+
+    --heading-font: "Merriweather", serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Required: span displays as block */
+#course-title {
+    display: block;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    padding: 1.25rem;
+}
+
+/* Navigation using Flex */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    gap: 1rem;
+    padding: .75rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: .75rem 1rem;
+    border-radius: 6px;
+    transition: all .3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Main */
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+}
+
+/* Cards */
+
+.card {
+    background: var(--card-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    min-height: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    transition: transform .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: .35rem 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
