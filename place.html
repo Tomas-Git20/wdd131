@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Tomás Lo Giudice">
+    <meta name="author" content="Tomás Lo Giudice">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Places</title>
+</head>
+<body>
+    <header>
+        <h1>Argentina</h1>
+    </header>
+
+    <main>
+
+        
+        <section class="hero">
+            <picture>
+                <source
+                    srcset="images/carpincho.webp"
+                    media="(min-width: 768px)">
+
+                <img
+                    src="images/carpincho.webp"
+                    alt="Scenic landscape of Argentina"
+                    width="1200"
+                    height="800">
+            </picture>
+        </section>
+
+        
+        <section class="data">
+
+            <h2>Data</h2>
+
+            <ul>
+                <li><strong>Area:</strong> 2,780,400 km²</li>
+                <li><strong>Population:</strong> 46,234,830</li>
+                <li><strong>Capital:</strong> Buenos Aires</li>
+                <li><strong>Languages:</strong> Spanish</li>
+                <li><strong>Currency:</strong> Argentine Peso (ARS)</li>
+                <li><strong>Time Zone:</strong> UTC−3</li>
+                <li><strong>Calling Code:</strong> +54</li>
+                <li><strong>Internet TLD:</strong> .ar</li>
+            </ul>
+
+        </section>
+
+        <section class="weather">
+
+            <h2>Weather</h2>
+
+            <img
+                class="weather-icon"
+                src="images/weather24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Partly cloudy"
+                width="64"
+                height="64">
+
+            <ul>
+                <li><strong>Temperature:</strong> 18°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 12 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear"></span> • Tomás Lo Giudice • Argentina
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+</body>
+</html>
