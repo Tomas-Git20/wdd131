@@ -1,0 +1,61 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+header{
+    background:#4b1248;
+    color:white;
+    text-align:center;
+    padding:1rem;
+}
+
+main{
+    max-width:700px;
+    margin:2rem auto;
+    background:white;
+    padding:2rem;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+.form-group{
+    margin-bottom:1.5rem;
+}
+
+label{
+    display:block;
+    margin:.4rem 0;
+}
+
+select,
+input[type=text],
+input[type=date],
+textarea{
+    width:100%;
+    padding:.8rem;
+    box-sizing:border-box;
+}
+
+.submit-btn{
+    width:100%;
+    padding:1rem;
+    font-size:1.2rem;
+    background:#4b1248;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#6f1c6c;
+}
+
+footer{
+    text-align:center;
+    padding:1rem;
+    margin-top:2rem;
+    background:#4b1248;
+    color:white;
+}
