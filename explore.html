@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historical periods, sources and feedback form for Argentina's history website.">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Tomás Lo Giudice">
+    <meta name="author" content="Tomás Lo Giudice">
+    <title>Explore & Sources | Argentina: A Historical Resume</title>
+    <link rel="stylesheet" href="history/css/history.css">
+    <script src="history/js/history.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="home.html">
+                Argentina<span>1816–Today</span>
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                Menu
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="home.html">Home</a>
+                <a href="timeline.html">Timeline</a>
+                <a class="active" href="explore.html">Explore & Sources</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-button" type="button">
+                Dark mode
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Context & reflection</p>
+                <h1>Explore Argentina's History</h1>
+                <p>
+                    Understanding Argentina requires looking at political,
+                    economic and social changes together.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Historical periods</p>
+                    <h2>Six broad chapters</h2>
+                </div>
+
+                <div class="period-grid">
+
+                    <article class="period-card">
+                        <span>1816–1852</span>
+                        <h3>Independence & conflict</h3>
+                        <p>
+                            Independence was followed by struggles over
+                            political organization, federalism and the
+                            relationship between Buenos Aires and the provinces.
+                        </p>
+                    </article>
+
+                    <article class="period-card">
+                        <span>1853–1916</span>
+                        <h3>Nation building</h3>
+                        <p>
+                            Constitutional organization, economic expansion,
+                            immigration and territorial consolidation transformed
+                            the country.
+                        </p>
+                    </article>
+
+                    <article class="period-card">
+                        <span>1916–1943</span>
+                        <h3>Mass politics</h3>
+                        <p>
+                            Electoral reforms expanded political participation,
+                            while Argentina experienced social and economic
+                            changes during the first half of the twentieth century.
+                        </p>
+                    </article>
+
+                    <article class="period-card">
+                        <span>1943–1976</span>
+                        <h3>Peronism & instability</h3>
+                        <p>
+                            Peronism became a central force in Argentine politics,
+                            alongside periods of military intervention and
+                            democratic government.
+                        </p>
+                    </article>
+
+                    <article class="period-card">
+                        <span>1976–1983</span>
+                        <h3>Dictatorship & Malvinas</h3>
+                        <p>
+                            Military rule, state terrorism and the 1982
+                            Falklands/Malvinas War profoundly affected Argentine
+                            society and politics.
+                        </p>
+                    </article>
+
+                    <article class="period-card">
+                        <span>1983–2026</span>
+                        <h3>Democratic Argentina</h3>
+                        <p>
+                            Democratic continuity was accompanied by constitutional
+                            reform, economic crises, social changes and major
+                            shifts between political movements.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section alternate">
+            <div class="container form-grid">
+
+                <div>
+                    <p class="eyebrow">Have your say</p>
+                    <h2>Suggest an event</h2>
+                    <p>
+                        Use this form to suggest a historical event that you
+                        believe deserves to be included in the timeline.
+                    </p>
+
+                    <div class="saved-message" id="saved-message" aria-live="polite">
+                        Your suggestions will be saved on this device.
+                    </div>
+                </div>
+
+                <form id="history-form" class="history-form">
+
+                    <div class="form-group">
+                        <label for="visitor-name">Your name</label>
+                        <input
+                            id="visitor-name"
+                            name="visitorName"
+                            type="text"
+                            minlength="2"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-year">Event year</label>
+                        <input
+                            id="event-year"
+                            name="eventYear"
+                            type="number"
+                            min="1816"
+                            max="2026"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-title">Event title</label>
+                        <input
+                            id="event-title"
+                            name="eventTitle"
+                            type="text"
+                            minlength="3"
+                            maxlength="100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-description">Why is it important?</label>
+                        <textarea
+                            id="event-description"
+                            name="eventDescription"
+                            rows="5"
+                            minlength="20"
+                            maxlength="500"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input
+                            id="agree"
+                            name="agreement"
+                            type="checkbox"
+                            required
+                        >
+
+                        <label for="agree">
+                            I confirm that this suggestion is educational
+                            and historically relevant.
+                        </label>
+                    </div>
+
+                    <button class="button primary" type="submit">
+                        Save suggestion
+                    </button>
+
+                    <p id="form-message" class="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Research</p>
+                    <h2>Sources used</h2>
+                </div>
+
+                <div class="sources-list">
+                    <article>
+                        <h3>Argentina.gob.ar</h3>
+                        <p>
+                            Official Argentine government information about
+                            independence, national history, democracy and
+                            constitutional development.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Archivo General de la Nación</h3>
+                        <p>
+                            Historical documents and primary sources preserved
+                            by Argentina's national archive.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Museo Casa Histórica de la Independencia</h3>
+                        <p>
+                            Information about the historic building in
+                            San Miguel de Tucumán where independence was declared.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Argentina: A Historical Resume</p>
+            <p>Educational project · 1816–2026</p>
+        </div>
+    </footer>
+</body>
+</html>

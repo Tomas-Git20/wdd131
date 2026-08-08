@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive timeline of important events in Argentine history from 1816 to 2026.">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Tomás Lo Giudice">
+    <meta name="author" content="Tomás Lo Giudice">
+    <title>Timeline | Argentina: A Historical Resume</title>
+    <link rel="stylesheet" href="history/css/history.css">
+    <script src="history/js/history.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="home.html">
+                Argentina<span>1816–Today</span>
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                Menu
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="home.html">Home</a>
+                <a class="active" href="timeline.html">Timeline</a>
+                <a href="explore.html">Explore & Sources</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-button" type="button">
+                Dark mode
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Interactive history</p>
+                <h1>Argentina's Timeline</h1>
+                <p>
+                    Select an era or search for a year or event to explore
+                    the most important turning points.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="timeline-controls">
+                    <label for="timeline-search">Search the timeline</label>
+
+                    <input
+                        id="timeline-search"
+                        type="search"
+                        placeholder="Example: democracy, 1816, Perón..."
+                        autocomplete="off"
+                    >
+
+                    <div class="filter-buttons" aria-label="Timeline filters">
+                        <button class="filter-button active" data-era="all">
+                            All
+                        </button>
+
+                        <button class="filter-button" data-era="independence">
+                            Independence
+                        </button>
+
+                        <button class="filter-button" data-era="organization">
+                            Nation building
+                        </button>
+
+                        <button class="filter-button" data-era="modern">
+                            Modern Argentina
+                        </button>
+
+                        <button class="filter-button" data-era="democracy">
+                            Democracy
+                        </button>
+                    </div>
+                </div>
+
+                <p id="timeline-status" class="results-status" aria-live="polite"></p>
+
+                <div id="timeline-container" class="timeline">
+                    <!-- JavaScript inserts events here -->
+                </div>
+
+                <p id="no-results" class="no-results" hidden>
+                    No events match your search.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Argentina: A Historical Resume</p>
+            <p>Educational project · 1816–2026</p>
+        </div>
+    </footer>
+</body>
+</html>
